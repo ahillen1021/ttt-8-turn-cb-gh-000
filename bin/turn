@@ -12,5 +12,3 @@ end
 
 move(board,index,player = "X")
 puts display_board(board)
-
-
