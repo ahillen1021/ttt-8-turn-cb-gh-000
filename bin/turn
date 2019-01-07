@@ -6,6 +6,7 @@ puts "Welcome to Tic Tac Toe!\n"
 puts display_board(board)
 puts "Where would you like to move?\n"
 input = gets.strip
+input = input.to_i
 index = input_to_index(board,input)
 if index == valid_turn?(board,index)
   move(board,index,player = "X")
