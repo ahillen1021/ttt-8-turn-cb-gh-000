@@ -2,18 +2,15 @@
 require_relative '../lib/turn'
 
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-puts "Welcome to Tic Tac Toe!\n\n"
 
-puts "Please enter 1-9:"
-
-input = gets.strip
-input = input.to_i
-index = input_to_index(input)
-if valid_move?(board,index)
-  move(board,index,player = "X")
-  puts display_board(board)
-else
-  until valid_move?(board,index)
-    puts "Please enter 1-9:"
-  end
+while !(valid_move?(board,index))
+  puts "Please enter 1-9:"
+  input = gets.strip
+  input = input.to_i
+  index = input_to_index(input)
 end
+
+move(board,index,player = "X")
+puts display_board(board)
+
+
