@@ -7,7 +7,7 @@ puts display_board(board)
 puts "Please enter 1-9:"
 input = gets.strip
 input = input.to_i
-index = input_to_index(board,input)
+index = input_to_index(input)
 if index == valid_move?(board,index)
   move(board,index,player = "X")
 else
